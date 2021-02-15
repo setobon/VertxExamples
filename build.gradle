@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile 'io.vertx:vertx-unit:3.9.0'
+    compile 'io.vertx:vertx-reactive-streams:4.0.2'
+    compile 'org.assertj:assertj-core:3.6.1'
+}
+
+test {
+    useJUnitPlatform()
+}
